@@ -19,7 +19,7 @@
             <div class="account-center">
                 <div class="account-box">
                     <div class="account-logo">
-                        <a href="#"><img src="assets/img/logo-dark.png" alt=""></a>
+                        <a href="#"><img src="assets/img/logo.png" alt=""></a>
                     </div>
                     <div class="form-group checkbox">
                         <label>
@@ -88,7 +88,7 @@
             <div class="content">
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
-                        <h4 class="page-title">SSD Healthcare - EU Authority Panel</h4>
+                        <h4 style=text-align:center; class="page-title">SSD Healthcare - EU Authority Panel</h4>
                     </div>
                 </div>
                 <div class="row" id="adminviewhospitalspage">
@@ -96,7 +96,7 @@
                         <table class="table">
                             <tr>
                                 <td colspan="3" align="center">
-                                    <h3>Healthcare Providers</h3>
+                                    <h4>Healthcare Providers</h4>
                                 </td>
                             </tr>
                             <tr>
@@ -114,14 +114,15 @@
                     <div class="col-lg-8 offset-lg-2">
                         <table class="table">
                             <tr>
-                                <td colspan="4" align="center">
-                                    <h3>All Doctors</h3>
+                                <td colspan="5" align="center">
+                                    <h4>All Doctors</h4>
                                 </td>
                             </tr>
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Registration No</th>
+                                <th>Specialization</th>
                                 <th>Hospital</th>
                             </tr>
                             <tbody id="displayalldoctorsbyadmin">
@@ -135,7 +136,7 @@
                         <table class="table">
                             <tr>
                                 <td colspan="3" align="center">
-                                    <h3>All Insurance Providers</h3>
+                                    <h4>All Insurance Providers</h4>
                                 </td>
                             </tr>
                             <tr>
@@ -154,7 +155,7 @@
                         <table class="table">
                             <tr>
                                 <td colspan="4" align="center">
-                                    <h3>All Patients</h3>
+                                    <h4>All Patients</h4>
                                 </td>
                             </tr>
                             <tr>
@@ -174,7 +175,7 @@
                         <table class="table">
                             <tr>
                                 <td colspan="5" align="center">
-                                    <h3>All Appointments</h3>
+                                    <h4>All Appointments</h4>
                                 </td>
                             </tr>
                             <tr>
@@ -889,10 +890,70 @@
                             <h4 class="page-title">Healthcare Profile</h4>
                         </div>
                         <div class="col-sm-2 col-1 text-right m-b-30">
-                            <a style="cursor: pointer;" onclick="App.showEditHospital()" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i> Edit Healthcare</a>
+                            <a style="cursor: pointer;color: white;" onclick="App.showEditHospital()" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i> Edit Healthcare</a>
                         </div>
                     </div>
                     <div class="card-box profile-header">
+
+                        <!-- Doctor Page View By Hospital Begins -->
+                        <div class="row" id="viewDoctorsbyHospital" style="display: none;">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Doctor ID</th>
+                                            <th>Name</th>
+                                            <th>Registration ID</th>
+                                            <th>Specialization</th>
+                                        </tr>
+                                        <tbody id="disDoctorsByHospital">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Doctor Page View By Hospital Ends -->
+
+                        <!-- View Patients By Hospital Beginning -->
+                        <div class="row" id="viewPatientsbyHospital" style="display: none;">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Patient Name</th>
+                                            <th>DoB</th>
+                                            <th>Insurance Provider</th>
+                                        </tr>
+                                        <tbody id="dispatientsByHospital">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- View Patients By Hospital Ends -->
+
+                        <!-- View Appointments By Hospital Beginning -->
+                        <div class="row" id="viewAppointmentsbyHospital" style="display: none;">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Doctor Name</th>
+                                            <th>Date</th>
+                                            <th>Patient ID</th>
+                                        </tr>
+                                        <tbody id="disappointmentsByHospital">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- View Appointments By Hospital Ends -->
                         <!-- Hospital Main Page Beginning - Healthcare Profile -->
                         <div class="row" id="hospitalmain">
                             <div class="col-md-12">
@@ -1062,46 +1123,6 @@
                     </div>
                     <!-- Hospital Edit Page Ends -->
 
-                    <!-- Doctor Page View By Hospital Begins -->
-                    <div class="row" id="viewDoctorsbyHospital" style="display: none;">
-                        <table class="table">
-                            <tr>
-                                <th>Doctor ID</th>
-                                <th>Name</th>
-                                <th>Registration ID</th>
-                            </tr>
-                            <tbody id="disDoctorsByHospital"></tbody>
-                        </table>
-                    </div>
-                    <!-- Doctor Page View By Hospital Ends -->
-
-                    <!-- View Patients By Hospital Beginning -->
-                    <div class="row" id="viewPatientsbyHospital" style="display: none;">
-                        <table class="table">
-                            <tr>
-                                <th>ID</th>
-                                <th>Patient Name</th>
-                                <th>DoB</th>
-                                <th>Insurance Provider</th>
-                            </tr>
-                            <tbody id="dispatientsByHospital"></tbody>
-                        </table>
-                    </div>
-                    <!-- View Patients By Hospital Ends -->
-
-                    <!-- View Appointments By Hospital Beginning -->
-                    <div class="row" id="viewAppointmentsbyHospital" style="display: none;">
-                        <table class="table">
-                            <tr>
-                                <th>ID</th>
-                                <th>Doctor Name</th>
-                                <th>Date</th>
-                                <th>Patient ID</th>
-                            </tr>
-                            <tbody id="disappointmentsByHospital"></tbody>
-                        </table>
-                    </div>
-                    <!-- View Appointments By Hospital Ends -->
                 </div>
             </div>
         </div>
@@ -1161,7 +1182,7 @@
                         </div>
 
                         <div class="col-sm-5 col-6 text-right m-b-30">
-                            <a style="cursor: pointer;" onclick="App.showEditDoctorPage()" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i> Edit Doctor</a>
+                            <a style="cursor: pointer; color:white" onclick="App.showEditDoctorPage()" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i> Edit Doctor</a>
                         </div>
                     </div>
                     <div class="card-box profile-header">
@@ -1449,13 +1470,13 @@
                                 <a style="cursor: pointer;" onclick="App.showDashboardByPatient()"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                             </li>
                             <li>
-                                <a href="doctors.html" style="pointer-events: none;color: #ccc;"><i class="fa fa-user-md"></i> <span>Doctors</span></a>
+                                <a style="cursor: pointer;" onclick="App.showDoctorsByPatient()"><i class="fa fa-user-md"></i> <span>Doctors</span></a>
                             </li>
                             <li>
                                 <a style="cursor: pointer;" onclick="App.ViewAppointmentByPatient()"><i class="fa fa-calendar" ></i> <span>Appointments</span></a>
                             </li>
                             <li>
-                                <a href="insurance-provider.html" style="pointer-events: none;color: #ccc;"><i class="fa fa-hospital-o" ></i> <span>Insurance Providers</span></a>
+                                <a style="cursor: pointer;" onclick="App.showInsuranceProvidersByPatient()"><i class="fa fa-hospital-o" ></i> <span>Insurance Providers</span></a>
                             </li>
                         </ul>
                     </div>
@@ -1470,7 +1491,7 @@
 
                         <div class="col-sm-5 col-6 text-right m-b-30">
                             <button data-toggle="modal" data-target="#share_files" class="btn btn-primary btn-rounded">Share</button>
-                            <a style="cursor: pointer;" onclick="App.showPatientEditPage()" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i> Edit Patient</a>
+                            <a style="cursor: pointer; color: white;" onclick="App.showPatientEditPage()" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i> Edit Patient</a>
                             <!-- <a href="add-appointment.html" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i> Book Appointment</a> -->
                             <button type="button" class="btn btn-primary btn-rounded" onclick="App.bookAppointmentByPatient()"><i class="fa fa-plus"></i> Book Appointment</button>
                         </div>
@@ -1740,6 +1761,55 @@
                             </div>
                         </div>
                         <!-- Patient Appointment Booking View Ends -->
+                        <!-- Patient Doctors View begining -->
+                        <div class="row" id="patientalldoctorsView" style="display: none;">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tr>
+                                            <td colspan="5" align="center">
+                                                <h4>All Doctors</h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Registration No</th>
+                                            <th>Specialization</th>
+                                            <th>Hospital</th>
+                                        </tr>
+                                        <tbody id="displayalldoctorsbypatient">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Patient Doctors View  Ends -->
+                        <!-- Patient Insurance View begining -->
+                        <div class="row" id="patientallinsuranceView" style="display: none;">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tr>
+                                            <td colspan="3" align="center">
+                                                <h4>All Insurance Providers</h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Registration No</th>
+                                        </tr>
+                                        <tbody id="displayallinsurancebyPatient">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Patient insurance View  Ends -->
+
                     </div>
                 </div>
             </div>
@@ -1818,7 +1888,7 @@
                         </div>
 
                         <div class="col-sm-5 col-6 text-right m-b-30">
-                            <a style="cursor: pointer;" onclick="App.showEditInsurancePage()" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i> Edit Insurance</a>
+                            <a style="cursor: pointer; color: white;" onclick="App.showEditInsurancePage()" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i> Edit Insurance</a>
                         </div>
                     </div>
                     <div class="card-box profile-header">
@@ -1859,7 +1929,7 @@
                                             <div class="col-md-6">
                                                 <ul class="personal-info">
                                                     <li>
-                                                        <span class="title">Addres</span>
+                                                        <span class="title">Address</span>
                                                         <span class="text" id="isuprofaddress">714 Burwell Heights Road, Bridge City, TX, 77611</span>
                                                     </li>
                                                     <li>

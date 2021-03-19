@@ -121,7 +121,7 @@ a:focus {
 	outline: 0 none;
 }
 a {
-	color: #009ce7;
+	color: red;
 }
 input,
 button,
@@ -433,15 +433,16 @@ table.table td h2 span {
 }
 .btn-primary {
 	border-color: transparent;
-	background-color: #009efb;
+	background-color: #fb0036;
+	color: #fff;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary.active,
 .btn-primary:active,
 .open > .dropdown-toggle.btn-primary {
-	background-color: #009efb;
-	border: 1px solid #009efb;
+	background-color: #fb0036;
+	border: 1px solid #fb0036;
 	color: #fff;
 }
 .btn-primary.active.focus,
@@ -630,6 +631,7 @@ table.table td h2 span {
 }
 .btn.btn-rounded {
 	border-radius: 50px;
+	color: #fff;
 }
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
@@ -702,7 +704,7 @@ textarea.form-control {
 -----------------------*/
 
 .header {
-	background-color: #009efb;
+	background-color: #fb004b;
 	left: 0;
 	position: fixed;
 	right: 0;
@@ -857,8 +859,7 @@ textarea.form-control {
 	color: #009efb;
 }
 .sidebar-menu li.active a {
-	color: #009efb;
-	background-color: #f3f3f3;
+
 }
 .menu-title {
 	color: #333;
@@ -2684,7 +2685,7 @@ a.fc-event:not([href]) {
 	width: 30%;
 }
 .personal-info li .text {
-	color: #888da8;
+	color: black;
 	display: block;
 	overflow: hidden;
 }
