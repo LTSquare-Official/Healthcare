@@ -1,2 +1,0 @@
-# SSD-Healthcare
-SSD Healthcare
